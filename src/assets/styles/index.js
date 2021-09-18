@@ -21,6 +21,27 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 20,
   },
+  picker: {
+    marginHorizontal: 10,
+    color: '#FFF',
+    backgroundColor: '#000',
+  },
+  filmeEscolhido: {
+    marginTop: 50,
+    backgroundColor: '#CCC',
+    marginHorizontal: 20,
+    borderRadius: 7,
+    alignItems: 'center',
+  },
+  nomeFilme: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: 'blue',
+  },
+  duracaoFilme: {
+    fontSize: 18,
+    color: 'blue',
+  },
 });
 
 export default styles;

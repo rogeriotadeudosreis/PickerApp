@@ -31,20 +31,25 @@ export default function App() {
         }}>
         {filmes.map((_filme, indice) => {
           return (
-            <Picker.Item key={indice} value={indice} label={_filme.nome}
-            
-            color='#000'
-             />
+            <Picker.Item
+              key={indice}
+              value={indice}
+              label={_filme.nome}
+              style={styles.picker}
+            />
           );
         })}
       </Picker>
 
-      {filme >= 0 && (
-        <View>
-          <Text>Filme: {filmes[filme].nome}</Text>
-          <Text>Filme: {filmes[filme].duracao}</Text>
-        </View>
-      )}
+      <View style={styles.filmeEscolhido}>
+        <Text>Filme escolhido...</Text>
+        {filme >= 0 && (
+          <View>
+            <Text style={styles.nomeFilme}>Filme: {filmes[filme].nome}</Text>
+            <Text style={styles.duracaoFilme}>Filme: {filmes[filme].duracao}</Text>
+          </View>
+        )}
+      </View>
     </View>
   );
 }
